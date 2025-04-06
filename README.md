@@ -1,4 +1,4 @@
-🌍 CarbonCalc - CO₂ Emission Analysis & Prediction Tool
+![image](https://github.com/user-attachments/assets/d8913f0f-bbdf-421d-99bc-ad4b2f84cdcd)🌍 CarbonCalc - CO₂ Emission Analysis & Prediction Tool
 
 CarbonCalc is an eco-conscious web application built using Python and Machine Learning that enables users to analyze, predict, and visualize CO₂ emissions based on vehicle specifications. It uses a clean and interactive frontend powered by Streamlit and runs entirely in a web browser.
 I had also provided two csv files in which observed_emission_full have full data while observed_emission_missed have few incomplete(missing values) and the co2 emission values in the dataset is based on the recent survey which says is 121.3g/km on average.
@@ -63,10 +63,10 @@ CarbonCalc uses a trained Multivariate Linear Regression model to predict CO₂ 
  📦 Install Dependencies
 
 Run the following command to install all required packages:
-pip install streamlit pandas matplotlib seaborn scikit-learn numpy
+--->pip install streamlit pandas matplotlib seaborn scikit-learn numpy
 
 ▶️ Run the App
-streamlit run app.py
+--->streamlit run app.py
 
 🖌️ Design Features
 Fully responsive and eco-friendly UI 🌿
@@ -84,6 +84,26 @@ CarbonCalc/
 ├── csv file 2
 
 📸 Screenshots
+![image](https://github.com/user-attachments/assets/7d866ae9-e103-425c-b98d-6c2791c9b10e)
+Home Page
+
+![image](https://github.com/user-attachments/assets/0c167d86-f0a1-4ff9-a47b-bf7af08827b7)
+Uploads .CSV file and different analysis options
+
+![image](https://github.com/user-attachments/assets/c1503483-f006-40f3-bbbd-c6f674ad324b)
+Univariant Analysis
+
+![image](https://github.com/user-attachments/assets/0b490f95-bd2f-411d-845d-daed5c2cc4a6)
+MultiVariant Analysis
+
+![image](https://github.com/user-attachments/assets/533440d1-1fca-431d-9dac-410acfd9d92e)
+Prediction Page
+
+![image](https://github.com/user-attachments/assets/321f0f0a-b5d7-43dd-9714-8c39542743d3)
+Different ML Insights
+
+![image](https://github.com/user-attachments/assets/0ccb41f1-5938-46e0-b39a-dc905c24d792)
+On uploading the csv with Missing values(You'll get errors if not selecting either of the replacement options)
 
 
 👨‍💻 Author
