@@ -1,7 +1,7 @@
 🌍 CarbonCalc - CO₂ Emission Analysis & Prediction Tool
 
 CarbonCalc is an eco-conscious web application built using Python and Machine Learning that enables users to analyze, predict, and visualize CO₂ emissions based on vehicle specifications. It uses a clean and interactive frontend powered by Streamlit and runs entirely in a web browser.
-I had also provided two csv files in which observed_emission_full have full data while observed_emission_missed have few incomplete(missing values) and the co2 emission values in the dataset is based on the recent survey which says is 121.3g/km on average.
+I had also provided two csv files in which observed_emission_full have full data while observed_emission_missed have few incomplete(missing values) and the co2 emission values in the dataset.
 ---
 
  🚀 Project Overview
