@@ -33,6 +33,17 @@ st.markdown("""
             background-color: var(--background);
             color: var(--text);
         }
+
+        /* Dark mode support: only change text color to white if in dark mode */
+        body[data-theme="dark"], .main[data-theme="dark"] {
+            color: #fff !important;
+        }
+        h1[data-theme="dark"], h2[data-theme="dark"], h3[data-theme="dark"], h4[data-theme="dark"], h5[data-theme="dark"], h6[data-theme="dark"] {
+            color: #fff !important;
+        }
+        p[data-theme="dark"], li[data-theme="dark"], ol[data-theme="dark"], ul[data-theme="dark"], .footer[data-theme="dark"] {
+            color: #fff !important;
+        }
         
         .stTextInput, .stFileUploader, .stSelectbox, .stSlider {
             border-radius: 10px;
@@ -61,6 +72,16 @@ st.markdown("""
             margin-bottom: 20px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             border-left: 5px solid var(--accent);
+            color: var(--text);
+        }
+
+        /* Eco-card text visibility for dark mode */
+        .eco-card[data-theme="dark"], .eco-card *[data-theme="dark"] {
+            color: #fff !important;
+        }
+        .eco-card h4[data-theme="dark"], .eco-card p[data-theme="dark"] {
+            color: #fff !important;
+        }
         }
         
         .sidebar .sidebar-content {
@@ -214,12 +235,12 @@ def validate_data(df):
         
         col1, col2 = st.columns(2)
         with col1:
-            if st.button("Proceed with Available Data"):
+            if st.button("Proceed with Available Data", key="proceed_available_data"):
                 st.session_state.data_valid = True
                 st.session_state.missing_cols = missing_cols
                 st.experimental_rerun()
         with col2:
-            if st.button("Upload Different File"):
+            if st.button("Upload Different File", key="upload_different_file"):
                 st.session_state.df = None
                 st.session_state.data_valid = False
                 st.session_state.missing_values_handled = False
@@ -242,7 +263,7 @@ def check_missing_values(df):
         
         col1, col2 = st.columns(2)
         with col1:
-            if st.button("Replace Missing Values with Averages"):
+            if st.button("Replace Missing Values with Averages", key="replace_missing_values"):
                 imputer = SimpleImputer(strategy='mean')
                 numeric_cols = df.select_dtypes(include=[np.number]).columns
                 df[numeric_cols] = imputer.fit_transform(df[numeric_cols])
@@ -252,7 +273,7 @@ def check_missing_values(df):
                 st.experimental_rerun()
         
         with col2:
-            if st.button("Proceed Without Replacement"):
+            if st.button("Proceed Without Replacement", key="proceed_without_replacement"):
                 st.session_state.missing_values_handled = True
                 st.experimental_rerun()
     else:
